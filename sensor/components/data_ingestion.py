@@ -12,22 +12,25 @@ class DataIngestion:
 
     def __init__(self,data_ingestion_config:config_entity.DataIngestionConfig):
         try:
+            logging.info(f"{'>>'*20} Data Ingestion {'<<'*20}")
             self.data_ingestion_config = data_ingestion_config
         except Exception as e:
             raise SensorException(e, sys)
+    
     def initiate_data_ingestion(self)->artifact_entity.DataIngestionArtifact:
         try:
+            logging.info(f"Exporting collection data as pandas dataframe")
             #Exporting collection data as pandas dataframe
             df:pd.DataFrame = utils.get_collection_as_dataframe(
                 database_name=self.data_ingestion_config.database_name,
                  collection_name=self.data_ingestion_config.collection_name)
 
-            df.replace(to_replace="na",value=np.nan,inplace=True)
+            df.replace(to_replace="na",value=np.NAN,inplace=True)
             feature_store_dir = os.path.dirname(self.data_ingestion_config.feature_store_file_path)
             os.makedirs(feature_store_dir,exist_ok=True)
 
             # saving the dataset to feature store
-            logging.info("Save dt to feature store folder")
+            logging.info("Save df to feature store folder")
             df.to_csv(path_or_buf=self.data_ingestion_config.feature_store_file_path,index=False,header=True)
 
             logging.info("Split dataset into train and test set")
