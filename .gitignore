@@ -7,7 +7,7 @@ __pycache__/
 *.so
 demotest.py
 logs
-artifacts
+artifact
 raw_data
 # Distribution / packaging
 .Python
