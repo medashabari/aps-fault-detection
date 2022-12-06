@@ -59,5 +59,7 @@ class ModelTrainerConfig:
         self.model_path = os.path.join(self.model_trainer_dir,"model",MODEL_FILE_PATH)
         self.expected_score = 0.7
         self.overfitting_thres = 0.1
-class ModelEvaluationConfig:...
+class ModelEvaluationConfig:
+    def __init__(self,training_pipeline_config:TrainingPipelineConfig):
+        self.chage_threshold = 0.01
 class ModelPusherConfig:...
