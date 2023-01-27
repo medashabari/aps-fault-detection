@@ -41,7 +41,7 @@ Before we run the project, make sure that you are having MongoDB in your local s
 
 ### Step 1: Clone the repository
 ```bash
-git clone https://github.com/sethusaim/Sensor-Fault-Detection.git
+git clone https://github.com/medashabari/aps-fault-detection.git
 ```
 
 ### Step 2- Create a conda environment after opening the repository
@@ -106,18 +106,9 @@ docker run -d -p 8080:8080 <IMAGE_NAME>
 To run the project  first execute the below commmand.
 MONGO DB URL: 
 ```
-mongodb+srv://admin:Aman@cluster0.a75efai.mongodb.net/?retryWrites=true&w=majority
-```
 windows user
-
 ```
-MONGO_DB_URL=mongodb+srv://admin:Aman@cluster0.a75efai.mongodb.net/?retryWrites=true&w=majority
-```
-
-Linux user
-
-```
-mongodb+srv://admin:Aman@cluster0.a75efai.mongodb.net/?retryWrites=true&w=majority
+MONGO_DB_URL= User your MongoDB URL
 ```
 
 then run 
