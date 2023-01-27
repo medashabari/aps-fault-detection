@@ -1,17 +1,16 @@
 # Sensor-Fault-Detection
 
-
 ### Problem Statement
 The Air Pressure System (APS) is a critical component of a heavy-duty vehicle that uses compressed air to force a piston to provide pressure to the brake pads, slowing the vehicle down. The benefits of using an APS instead of a hydraulic system are the easy availability and long-term sustainability of natural air.
 
 This is a Binary Classification problem, in which the affirmative class indicates that the failure was caused by a certain component of the APS, while the negative class
 indicates that the failure was caused by something else.
 
-### Proposed Solution 
+### Solution Proposed 
 In this project, the system in focus is the Air Pressure system (APS) which generates pressurized air that are utilized in various functions in a truck, such as braking and gear changes. The datasets positive class corresponds to component failures for a specific component of the APS system. The negative class corresponds to trucks with failures for components not related to the APS system.
 
 The problem is to reduce the cost due to unnecessary repairs. So it is required to minimize the false predictions.
-## Technolgies used
+## Technology stack used
 1. Python 
 2. Machine learning
 3. Docker
@@ -23,6 +22,7 @@ The problem is to reduce the cost due to unnecessary repairs. So it is required 
 2. AWS EC2
 3. AWS ECR
 4. Git Actions
+5. Terraform
 
 ## How to run?
 Before we run the project, make sure that you are having MongoDB in your local system, with Compass since we are using MongoDB for data storage. You also need AWS account to access the service like S3, ECR and EC2 instances.
@@ -104,11 +104,10 @@ docker run -d -p 8080:8080 <IMAGE_NAME>
 ```
 
 To run the project  first execute the below commmand.
-MONGO DB URL: 
-```
 windows user
+
 ```
-MONGO_DB_URL= User your MongoDB URL
+MONGO_DB_URL=<MONGO_DB_URL>
 ```
 
 then run 
@@ -151,8 +150,8 @@ conda create -p venv python==3.7 -y
 ### Create a .env It contains details.
 ```
 MONGO_DB_URL="mongodb://localhost:27017/neurolabDB"
-AWS_ACCESS_KEY_ID="avb12234tca34"
-AWS_SECRET_ACCESS_KEY="aksepmset/k"
+AWS_ACCESS_KEY_ID="abcderf"
+AWS_SECRET_ACCESS_KEY="dhcakokmlowpna/"
 ```
 ### **To install dockers in aws machine (EC2)**
 ```
