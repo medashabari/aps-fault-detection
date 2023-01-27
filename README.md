@@ -127,7 +127,7 @@ python main.py
 
 ### To download the dataset 
 ```
-wget https://raw.githubusercontent.com/itsguptaaman/APS_PROJECT/main/aps_failure_training_set1.csv
+wget https://raw.githubusercontent.com/medashabari/aps-fault-detection/main/aps_failure_training_set1.csv
 ```
 
 ### To check and reset git log
@@ -160,8 +160,8 @@ conda create -p venv python==3.7 -y
 ### Create a .env It contains details.
 ```
 MONGO_DB_URL="mongodb://localhost:27017/neurolabDB"
-AWS_ACCESS_KEY_ID="aagswdiquyawvdiu"
-AWS_SECRET_ACCESS_KEY="sadoiuabnswodihabosdbn"
+AWS_ACCESS_KEY_ID="avb12234tca34"
+AWS_SECRET_ACCESS_KEY="aksepmset/k"
 ```
 ### **To install dockers in aws machine (EC2)**
 ```
